@@ -1,1 +1,21 @@
+TODO:
+
+summary grabber/parser:
+     use wiki api and return the page summary - done
+
+
+main app
+    done in tkinter
+    every 1ms run loop that gets from entry and checks if quote is equal to the quote str, no lower cases
+    finished returns graphs and stats for the run
+    unlockable styles?
+
+
+
+
+graphs for ending
+    functions for making graphs from the finished result and displays them
+
+
+
 
