@@ -3,6 +3,7 @@ from tkinter import TOP, ttk
 import wikiget
 import time
 
+
 class mainapp(ttk.Frame):
     def __init__(self, parent, *args, **kwargs):
         ttk.Frame.__init__(self, parent, *args, **kwargs)
@@ -32,12 +33,13 @@ class mainapp(ttk.Frame):
         
         def update(): #updates every 1/10th of a second and checks if the text is finished. if it is finished, displays results.
             self.entrypassage = self.entrybar.get()
-            if self.entrypassage == self.passage:
+            if len(self.entrypassage) == len(self.passage):
                 self.endtime = time.time()
                 self.finishtime = round(self.endtime - self.starttime, 2)
                 self.kps = round(len(self.passage) / self.finishtime, 2)
+                self.difference = (sum(self.entrypassage[i] != self.passage[i] for i in range(len(self.passage))))
                 
-                self.timelabel = ttk.Label(text=f'Congratulations! you completed this text in {self.finishtime} seconds. your KPS was {self.kps}')
+                self.timelabel = ttk.Label(text=f'Congratulations! you completed this text in {self.finishtime} seconds. your KPS was {self.kps}, and you got {self.difference} letters wrong.')
                 
                 self.passagelabel.destroy()
                 self.timelabel.place(relx=.5, rely=.3, anchor="c")
