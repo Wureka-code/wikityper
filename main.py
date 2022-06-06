@@ -31,8 +31,7 @@ class mainapp(ttk.Frame):
         self.starttime = time.time()
         
         def update(): #updates every 1/10th of a second and checks if the text is finished. if it is finished, displays results.
-            self.entrypassage = self.entrybar.get() 
-            print(self.entrypassage)
+            self.entrypassage = self.entrybar.get()
             if self.entrypassage == self.passage:
                 self.endtime = time.time()
                 self.finishtime = round(self.endtime - self.starttime, 2)
