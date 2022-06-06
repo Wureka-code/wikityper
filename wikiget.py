@@ -1,4 +1,5 @@
 import requests 
+import unidecode
 
 def getsum(text=None):
     if text == None:
@@ -7,7 +8,8 @@ def getsum(text=None):
         request=f'https://en.wikipedia.org/api/rest_v1/page/summary/{text}'
     result = requests.get(request)
     json = result.json()
-    return json['extract']
+    clean = json['extract']
+    return unidecode.unidecode(clean)
 
 if __name__ == '__main__':
     req = getsum('Fortnite: Battle Royale')
