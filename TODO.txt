@@ -9,6 +9,7 @@ main app
     every 1ms run loop that gets from entry and checks if quote is equal to the quote str, no lower cases
     finished returns graphs and stats for the run
     unlockable styles?
+    settings - hard mode and cutomisable theme & length
 
 
 
