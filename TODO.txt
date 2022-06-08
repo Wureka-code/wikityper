@@ -5,9 +5,9 @@ summary grabber/parser:
 
 
 main app
-    done in tkinter
-    every 1ms run loop that gets from entry and checks if quote is equal to the quote str, no lower cases
-    finished returns graphs and stats for the run
+    done in tkinter - done
+    every 1ms run loop that gets from entry and checks if quote is equal to the quote str, no lower cases - done
+    finished returns graphs and stats for the run - stats done, implementation unfinished
     unlockable styles?
     settings - hard mode and cutomisable theme & length
 
@@ -15,7 +15,7 @@ main app
 
 
 graphs for ending
-    functions for making graphs from the finished result and displays them
+    functions for making graphs from the finished result and displays them - working (finished functions, working on implementation)
 
 
 
